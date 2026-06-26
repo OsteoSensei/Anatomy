@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluation : Légendes du Schéma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        #schema-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+        }
+        #schema-image {
+            max-width: 100%;
+            display: block;
+        }
+        .legende-input {
+            position: absolute;
+            width: 120px;
+            padding: 4px;
+            font-size: 14px;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 1);
+            transform: translate(-50%, -50%); /* Centre le champ sur les coordonnées */
+        }
+        .correct { 
+            background-color: #c8e6c9; 
+            border-color: #4caf50; 
+            color: #1b5e20;
+        }
+        .incorrect { 
+            background-color: #ffcdd2; 
+            border-color: #f44336;
+            color: #b71c1c;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #resultat {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Complétez les légendes du schéma</h1>
+    <p>Inscrivez le nom exact dans chaque case, puis cliquez sur Valider.</p>
+
+    <div id="schema-container">
+        <img id="schema-image" src="Gastro1.png" alt="Schéma à légender">
+    </div>
+    
+    <br>
+    <button onclick="validerReponses()">Valider mes réponses</button>
+    <div id="resultat"></div>
+
+    <script>
+        /* * CONFIGURATION DES LÉGENDES
+         * x et y sont exprimés en pourcentages (%) par rapport à la taille de l'image.
+         * Cela permet aux champs de rester bien placés même si on redimensionne l'écran.
+         */
+        const legendes = [
+            { id: 1, x: 88, y: 20, reponseAttendue: "fundus" },
+            { id: 2, x: 28, y: 45, reponseAttendue: "pylore" },
+            { id: 3, x: 46, y: 21, reponseAttendue: "cardia" },
+            { id: 4, x: 16, y: 72, reponseAttendue: "duodenum" },
+            { id: 5, x: 25, y: 82, reponseAttendue: "antre" },
+            { id: 6, x: 88, y: 86, reponseAttendue: "fond" },
+            { id: 7, x: 54, y: 47, reponseAttendue: "corps" },
+            { id: 8, x: 47, y: 09, reponseAttendue: "oesophage" }
+        ];
+
+        const container = document.getElementById('schema-container');
+
+        // Génération automatique des champs de texte sur l'image
+        legendes.forEach(point => {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'legende-input';
+            input.id = 'input-' + point.id;
+            input.style.left = point.x + '%';
+            input.style.top = point.y + '%';
+            input.placeholder = "Légende " + point.id;
+            container.appendChild(input);
+        });
+
+        // Fonction pour retirer les accents et les majuscules afin d'être indulgent sur la syntaxe
+        function normaliserTexte(texte) {
+            return texte.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        }
+
+        // Fonction appelée lors du clic sur le bouton
+        function validerReponses() {
+            let score = 0;
+            
+            legendes.forEach(point => {
+                const input = document.getElementById('input-' + point.id);
+                const reponseEleve = normaliserTexte(input.value);
+                const reponseCorrecte = normaliserTexte(point.reponseAttendue);
+
+                // Réinitialiser les classes
+                input.classList.remove('correct', 'incorrect');
+
+                if (reponseEleve === reponseCorrecte) {
+                    score++; // Ajoute 1 point
+                    input.classList.add('correct');
+                } else {
+                    input.classList.add('incorrect');
+                }
+            });
+
+            // Affichage du score
+            document.getElementById('resultat').innerText = `Votre score : ${score} / ${legendes.length}`;
+        }
+    </script>
+
+</body>
+</html>
