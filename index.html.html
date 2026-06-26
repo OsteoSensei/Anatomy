@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprentissage de l'Anatomie - Accueil</title>
+    <style>
+        /* Variables de couleurs pour un thème médical/épuré */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --hover-shadow: 0 10px 15px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Style de l'en-tête */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        header img {
+            height: 100px; /* Ajustez la taille de votre logo ici */
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* Grille du sommaire */
+        .sommaire-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Style des cartes (chapitres) */
+        .chapitre-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .chapitre-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-left-color: var(--secondary-color);
+        }
+
+        .chapitre-numero {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-right: 15px;
+            min-width: 45px;
+        }
+
+        .chapitre-titre {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Pied de page */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo 2019 cab.png" alt="Logo Cabinet">
+        <h1>Apprentissage de l'Anatomie</h1>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <p>Bienvenue sur votre espace de cours. Sélectionnez un chapitre pour commencer votre apprentissage.</p>
+        </div>
+
+        <div class="sommaire-grid">
+            <a href="chapitre0.html" class="chapitre-card">
+                <span class="chapitre-numero">00</span>
+                <span class="chapitre-titre">TERMINOLOGIE</span>
+            </a>
+
+            <a href="chapitre1.html" class="chapitre-card">
+                <span class="chapitre-numero">01</span>
+                <span class="chapitre-titre">OSTÉOLOGIE</span>
+            </a>
+
+            <a href="chapitre2.html" class="chapitre-card">
+                <span class="chapitre-numero">02</span>
+                <span class="chapitre-titre">ARTHROLOGIE</span>
+            </a>
+
+            <a href="chapitre3.html" class="chapitre-card">
+                <span class="chapitre-numero">03</span>
+                <span class="chapitre-titre">MYOLOGIE</span>
+            </a>
+
+            <a href="chapitre4.html" class="chapitre-card">
+                <span class="chapitre-numero">04</span>
+                <span class="chapitre-titre">LE SYSTÈME CARDIO-VASCULAIRE</span>
+            </a>
+
+            <a href="chapitre5.html" class="chapitre-card">
+                <span class="chapitre-numero">05</span>
+                <span class="chapitre-titre">LE SYSTÈME NERVEUX</span>
+            </a>
+
+            <a href="chapitre6.html" class="chapitre-card">
+                <span class="chapitre-numero">06</span>
+                <span class="chapitre-titre">LE SYSTÈME ENDOCRINIEN</span>
+            </a>
+
+            <a href="chapitre7.html" class="chapitre-card">
+                <span class="chapitre-numero">07</span>
+                <span class="chapitre-titre">LE SYSTÈME LYMPHATIQUE</span>
+            </a>
+
+            <a href="chapitre8.html" class="chapitre-card">
+                <span class="chapitre-numero">08</span>
+                <span class="chapitre-titre">LE SYSTÈME DIGESTIF</span>
+            </a>
+
+            <a href="chapitre9.html" class="chapitre-card">
+                <span class="chapitre-numero">09</span>
+                <span class="chapitre-titre">LE SYSTÈME RESPIRATOIRE</span>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Plateforme d'apprentissage en anatomie</p>
+    </footer>
+
+</body>
+</html>
