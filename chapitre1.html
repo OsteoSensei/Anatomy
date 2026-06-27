@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapitre 8 : Le Système Digestif</title>
+    <title>Chapitre 1 : Ostéologie</title>
     <style>
         /* Reprise des variables de l'index pour la cohérence graphique */
         :root {
@@ -97,15 +97,15 @@
             margin-bottom: 40px;
         }
 
-        /* Grille des Organes */
-        .organes-grid {
+        /* Grille des Os */
+        .os-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
         /* Style des boutons cliquables (Cartes) */
-        .organe-card {
+        .os-card {
             background-color: var(--card-bg);
             border-radius: 8px;
             padding: 20px;
@@ -123,8 +123,8 @@
             min-height: 80px;
         }
 
-        /* Effet de survol spécifique au système digestif (accentuation orange/rouge) */
-        .organe-card:hover {
+        /* Effet de survol spécifique au chapitre (accentuation orange/rouge) */
+        .os-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--hover-shadow);
             border-top-color: var(--accent-color);
@@ -149,55 +149,47 @@
 
     <header>
         <img src="logo 2019 cab.png" alt="Logo Cabinet">
-        <h1>Chapitre 8 : Le Système Digestif</h1>
-        <div class="subtitle">Sélection de l'organe d'étude</div>
+        <h1>Chapitre 1 : Ostéologie</h1>
+        <div class="subtitle">Sélection des os à étudier</div>
     </header>
 
     <div class="container">
         <div class="instructions">
-            <p>Choisissez l'organe ci-dessous que vous souhaitez étudier ou réviser aujourd'hui.</p>
+            <p>Choisissez ci-dessous les os que vous souhaitez étudier ou réviser aujourd'hui.</p>
         </div>
 
-        <div class="organes-grid">
+        <div class="os-grid">
             
-            <a href="chapitre8_cavite_orale.html" class="organe-card">
-                Cavité orale
+            <a href="chapitre1_tete.html" class="os-card">
+                Tête
             </a>
 
-            <a href="chapitre8_pharynx.html" class="organe-card">
-                Pharynx
+            <a href="chapitre1_rachis.html" class="os-card">
+                Rachis
             </a>
 
-            <a href="chapitre8_oesophage.html" class="organe-card">
-                Œsophage
+            <a href="chapitre1_cage_thoracique.html" class="os-card">
+                Cage thoracique
             </a>
 
-            <a href="chapitre8_estomac.html" class="organe-card">
-                Estomac
+            <a href="chapitre1_ceinture_scapulaire.html" class="os-card">
+                Ceinture scapulaire
             </a>
 
-            <a href="chapitre8_duodenum.html" class="organe-card">
-                Duodénum
+            <a href="chapitre1_membre_supérieur.html" class="os-card">
+                Membre supérieur
             </a>
 
-            <a href="chapitre8_jejunum.html" class="organe-card">
-                Jéjunum
+            <a href="chapitre1_ceinture_pelvienne.html" class="os-card">
+                Ceinture pelvienne
             </a>
 
-            <a href="chapitre8_ileon.html" class="organe-card">
-                Iléon
+            <a href="chapitre1_membre_inférieur.html" class="os-card">
+                Membre inférieur
             </a>
 
-            <a href="chapitre8_caecum.html" class="organe-card">
-                Cæcum
-            </a>
-
-            <a href="chapitre8_colon.html" class="organe-card">
-                Côlon
-            </a>
-
-            <a href="chapitre8_rectum.html" class="organe-card">
-                Rectum
+            <a href="chapitre1_sesamoides.html" class="os-card">
+                Sésamoïdes
             </a>
 
         </div>
