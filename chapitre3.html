@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 3 : Myologie</title>
+    <style>
+        /* Reprise des variables de l'index pour la cohérence graphique */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --hover-shadow: 0 10px 15px rgba(0,0,0,0.15);
+            --accent-color: #e74c3c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Barre supérieure de navigation */
+        .nav-bar {
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn-retour {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            background-color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .btn-retour:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+            transform: translateX(-3px);
+        }
+
+        /* En-tête */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-color); /* Couleur différente pour marquer le chapitre */
+        }
+
+        header img {
+            height: 90px;
+            vertical-align: middle;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        header .subtitle {
+            margin: 5px 0 0 0;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .instructions {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* Grille des muscles */
+        .muscles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* Style des boutons cliquables (Cartes) */
+        .muscles-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-top: 4px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80px;
+        }
+
+        /* Effet de survol spécifique au chapitre (accentuation orange/rouge) */
+        .muscles-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-top-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Pied de page */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="index.html" class="btn-retour">&#8592; Retour à l'accueil</a>
+    </div>
+
+    <header>
+        <img src="logo 2019 cab.png" alt="Logo Cabinet">
+        <h1>Chapitre 3 : Myologie</h1>
+        <div class="subtitle">Sélection des régions à étudier</div>
+    </header>
+
+    <div class="container">
+        <div class="instructions">
+            <p>Choisissez ci-dessous les régions que vous souhaitez étudier ou réviser aujourd'hui.</p>
+        </div>
+
+        <div class="muscles-grid">
+            
+            <a href="chapitre3_tete_cou.html" class="muscles-card">
+                Tête et cou
+            </a>
+
+            <a href="chapitre3_rachis.html" class="muscles-card">
+                Rachis
+            </a>
+
+            <a href="chapitre3_thorax_abdomen.html" class="muscles-card">
+                Thorax et abdomen
+            </a>
+
+            <a href="chapitre3_pelvis_perinee.html" class="muscles-card">
+                Pelvis et périnée
+            </a>
+
+            <a href="chapitre3_membre_supérieur.html" class="muscles-card">
+                Membre supérieur
+            </a>
+
+            <a href="chapitre3_membre_inférieur.html" class="muscles-card">
+                Membre inférieur
+            </a>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Plateforme d'apprentissage en anatomie d'Adrien SISISLIA D.O.</p>
+    </footer>
+
+</body>
+</html>
