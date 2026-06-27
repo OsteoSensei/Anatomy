@@ -98,11 +98,21 @@
         }
 
         /* Grille des muscles */
-        .muscles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+.muscles-grid {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+  justify-content: center; /* Centre les éléments, y compris sur la dernière ligne ! */
+  gap: 20px; /* Garde ton espacement intact */
+}
+
+/* Il faut cibler tes cartes à l'intérieur de la grille */
+.muscles-grid > .muscles-card { /* Remplace "div" par la classe de tes cartes si besoin, ex: .card */
+  /* On force la largeur à 1/3 de l'espace, moins les marges */
+  width: calc((100% - 40px) / 3); 
+  
+  /* Optionnel : on garde une taille minimum pour que ça reste joli sur petit écran */
+  min-width: 220px; 
+}
 
         /* Style des boutons cliquables (Cartes) */
         .muscles-card {
